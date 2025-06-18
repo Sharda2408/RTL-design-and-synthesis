@@ -30,9 +30,13 @@ end
 ## 2. 🛠️ Open-source Simulator iverilog
 
 ### 🔍 How a Simulator Works
+
 -Simulation mimics hardware behavior without fabrication.
+
 -Takes HDL code + testbench → calculates outputs based on stimuli.
+
 -Tracks signal transitions, resolves delays and logic events.
+
 -Outputs a .vcd (Value Change Dump) file for waveform viewing.
 
 ### ⚙️ Iverilog-Based Simulation
@@ -42,8 +46,11 @@ end
 **Compilation flow:**
 
 -Write Verilog design and testbench
+
 -Compile using iverilog
+
 -Run the generated executable
+
 -View output waveform using GTKWave
 
 📷 Image: Simulation process using iverilog
@@ -61,6 +68,7 @@ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
 **Files Used:**
 
 -good_mux.v – Verilog design
+
 -tb_good_mux.v – Testbench
 
 ```shell
@@ -76,6 +84,7 @@ gvim tb_good_mux.v -o good_mux.v
 📷 Image: Verilog code in GVim
 
 **GTKWave** displays signal transitions to verify behavior.
+
 The **testbench** provides clock, stimulus, and resets.
 
 ## 4. ⚙️ Yosys and Logic Synthesis
@@ -86,16 +95,20 @@ The **testbench** provides clock, stimulus, and resets.
 
 📷 Image: Yosys terminal setup
 
-###Synthesis steps:
+### Synthesis steps:
 
 -Parse RTL
+
 -Optimize logic
+
 -Map to technology cells
 
 📷 Image: Logic gate mapping process
 
 ### 🧱 Netlist
+
 A **netlist** is a list of gates and their interconnections.
+
 It’s the output of synthesis tools, based on libraries like Sky130.
 
 ## 5. 🧪 Yosys with Sky130 PDKs
@@ -113,10 +126,15 @@ show
 ### 🧠 Gate-Level Mapping
 
 **Yosys maps logic to standard cells like:**
+
 -AND2_X1 – AND gate with X1 drive strength
+
 -INV_X1 – Inverter with X1 drive strength
+
 -Drive strength suffixes:
+
 -X1: Lower power, smaller size, slower
+
 -X4: Higher power, faster, larger area
 
 ## ✅ Summary
