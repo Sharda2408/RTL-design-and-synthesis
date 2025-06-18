@@ -112,14 +112,14 @@ show
 
 ### 🧠 Gate-Level Mapping
 
--Yosys maps logic to standard cells like:
+**Yosys maps logic to standard cells like:**
 -AND2_X1 – AND gate with X1 drive strength
 -INV_X1 – Inverter with X1 drive strength
 -Drive strength suffixes:
 -X1: Lower power, smaller size, slower
 -X4: Higher power, faster, larger area
 
-✅ Summary
+## ✅ Summary
 -Introduced to Verilog and RTL design structure.
 
 -Understood simulation concept and how simulators process time-based events.
