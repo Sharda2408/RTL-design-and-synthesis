@@ -38,6 +38,7 @@ end
 -Tracks signal transitions, resolves delays and logic events.
 
 -Outputs a .vcd (Value Change Dump) file for waveform viewing.
+![Simulation Flow](./image/1.png)
 
 -Outputs a .vcd (Value Change Dump) file for waveform viewing.
 
@@ -56,6 +57,7 @@ end
 -View output waveform using GTKWave
 
 📷 Image: Simulation process using iverilog
+![iverilog Simulation](./image/2.png)
 
 ## 3. 🧪 Using iverilog and GTKWave
 
@@ -80,10 +82,12 @@ iverilog good_mux.v tb_good_mux.v
 ./a.out
 gtkwave tb_good_mux.vcd
 ```
+![gtkwaveform](./image/3.png)
 
 ```shell
 gvim tb_good_mux.v -o good_mux.v
 ```
+![gvim](./image/4.png)
 
 **GTKWave** displays signal transitions to verify behavior.
 
@@ -96,9 +100,15 @@ The **testbench** provides clock, stimulus, and resets.
 GTKWave displays signal transitions to verify behavior.
 The testbench provides clock, stimulus, and resets.
 
-### Synthesis steps:
+## 4. ⚙️ Yosys and Logic Synthesis
+Yosys is a synthesis tool that converts Verilog RTL to a gate-level netlist.
 
-**Synthesis steps:**
+![yosys interface](./image/5.png)
+
+![Simulation Flow](./image/6.png)
+
+
+### Synthesis steps:
 
 -Parse RTL
 
@@ -106,7 +116,7 @@ The testbench provides clock, stimulus, and resets.
 
 -Map to technology cells
 
-📷 Image: Logic gate mapping process
+![Simulation Flow](./image/8.png)
 
 ### 🧱 Netlist
 
@@ -127,6 +137,7 @@ abc -liberty ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
 📷 Image: Synthesized circuit schematic (Yosys)
+![Simulation Flow](./image/9.png)
 
 ### 🧠 Gate-Level Mapping
 
@@ -144,7 +155,7 @@ show
 
 ## ✅ Summary
 
-Introduced to Verilog and RTL design structure.
+-Introduced to Verilog and RTL design structure.
 
 -Understood simulation concept and how simulators process time-based events.
 
