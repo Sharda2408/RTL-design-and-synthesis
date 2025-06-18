@@ -20,12 +20,14 @@ RTL (Register Transfer Level) describes circuits in terms of data flow and regis
 
 Sequential logic is modeled using constructs like:
 
-```verilog
+```shell
+verilog
 always @(posedge clk)
 begin
   // logic
 end
-2. 🛠️ Open-source Simulator iverilog
+```
+## 2. 🛠️ Open-source Simulator iverilog
 🔍 How a Simulator Works
 Simulation mimics hardware behavior without fabrication.
 
