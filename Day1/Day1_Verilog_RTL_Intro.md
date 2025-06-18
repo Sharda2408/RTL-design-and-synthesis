@@ -126,24 +126,16 @@ The **testbench** provides clock, stimulus, and resets.
 ## 4. ⚙️ Yosys and Logic Synthesis
 
 **Yosys** is a synthesis tool that converts Verilog RTL to a gate-level netlist.
-=======
-```
+
 GTKWave displays signal transitions to verify behavior.
 The testbench provides clock, stimulus, and resets.
 
 ## 4. ⚙️ Yosys and Logic Synthesis
 Yosys is a synthesis tool that converts Verilog RTL to a gate-level netlist.
->>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
 
-📷 Image: Yosys interface
-
-📷 Image: Yosys terminal setup
-
-<<<<<<< HEAD
 ### Synthesis steps:
 =======
 **Synthesis steps:**
->>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
 
 -Parse RTL
 
@@ -160,10 +152,9 @@ A **netlist** is a list of gates and their interconnections.
 It’s the output of synthesis tools, based on libraries like Sky130.
 
 ## 5. 🧪 Yosys with Sky130 PDKs
-<<<<<<< HEAD
+
 🧰 Sample Flow
-=======
->>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
+
 ```shell
 yosys
 read_liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -186,15 +177,11 @@ show
 
 -X1: Lower power, smaller size, slower
 
-<<<<<<< HEAD
 -X4: Higher power, faster, larger area
-=======
-## ✅ Summary
-Introduced to Verilog and RTL design structure.
->>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
 
 ## ✅ Summary
--Introduced to Verilog and RTL design structure.
+
+Introduced to Verilog and RTL design structure.
 
 -Understood simulation concept and how simulators process time-based events.
 
@@ -202,8 +189,3 @@ Introduced to Verilog and RTL design structure.
 
 -Synthesized RTL to gate-level netlist using Yosys.
 
-<<<<<<< HEAD
--Explored Sky130 standard cell libraries and drive strength impact.
-=======
-
->>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
