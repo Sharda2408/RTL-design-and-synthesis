@@ -16,7 +16,11 @@
 
 **Verilog** is a Hardware Description Language (HDL) used to describe and model digital systems.
 
+<<<<<<< HEAD
 **RTL (Register Transfer Level)** describes circuits in terms of data flow and registers.
+=======
+**RTL** (Register Transfer Level) describes circuits in terms of data flow and registers.
+>>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
 
 **Sequential logic** is modeled using constructs like:
 
@@ -29,6 +33,7 @@ end
 ```
 ## 2. 🛠️ Open-source Simulator iverilog
 
+<<<<<<< HEAD
 ### 🔍 How a Simulator Works
 
 -Simulation mimics hardware behavior without fabrication.
@@ -36,9 +41,21 @@ end
 -Takes HDL code + testbench → calculates outputs based on stimuli.
 
 -Tracks signal transitions, resolves delays and logic events.
+=======
+ **How a Simulator Works**
+-Simulation mimics hardware behavior without fabrication.
+
+-Takes HDL code + testbench → calculates outputs based on stimuli.
+
+-Tracks signal transitions, resolves delays and logic events
 
 -Outputs a .vcd (Value Change Dump) file for waveform viewing.
 
+>>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
+
+-Outputs a .vcd (Value Change Dump) file for waveform viewing.
+
+<<<<<<< HEAD
 ### ⚙️ Iverilog-Based Simulation
 
 **Icarus Verilog** (iverilog) is an open-source command-line simulator.
@@ -51,13 +68,28 @@ end
 
 -Run the generated executable
 
+=======
+-Compilation flow:
+
+-Write Verilog design and testbench
+
+-Compile using iverilog
+
+-Run the generated executable
+
+>>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
 -View output waveform using GTKWave
 
 📷 Image: Simulation process using iverilog
 
 ## 3. 🧪 Using iverilog and GTKWave
+<<<<<<< HEAD
 
 ### ⚙️ Setup
+=======
+⚙️ Setup
+bash
+>>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
 ```shell
 sudo apt install iverilog gtkwave
 git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
@@ -69,8 +101,11 @@ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
 
 -good_mux.v – Verilog design
 
+<<<<<<< HEAD
 -tb_good_mux.v – Testbench
 
+=======
+>>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
 ```shell
 iverilog good_mux.v tb_good_mux.v
 ./a.out
@@ -82,6 +117,7 @@ gtkwave tb_good_mux.vcd
 gvim tb_good_mux.v -o good_mux.v
 ```
 📷 Image: Verilog code in GVim
+<<<<<<< HEAD
 
 **GTKWave** displays signal transitions to verify behavior.
 
@@ -90,12 +126,24 @@ The **testbench** provides clock, stimulus, and resets.
 ## 4. ⚙️ Yosys and Logic Synthesis
 
 **Yosys** is a synthesis tool that converts Verilog RTL to a gate-level netlist.
+=======
+```
+GTKWave displays signal transitions to verify behavior.
+The testbench provides clock, stimulus, and resets.
+
+## 4. ⚙️ Yosys and Logic Synthesis
+Yosys is a synthesis tool that converts Verilog RTL to a gate-level netlist.
+>>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
 
 📷 Image: Yosys interface
 
 📷 Image: Yosys terminal setup
 
+<<<<<<< HEAD
 ### Synthesis steps:
+=======
+**Synthesis steps:**
+>>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
 
 -Parse RTL
 
@@ -112,7 +160,10 @@ A **netlist** is a list of gates and their interconnections.
 It’s the output of synthesis tools, based on libraries like Sky130.
 
 ## 5. 🧪 Yosys with Sky130 PDKs
+<<<<<<< HEAD
 🧰 Sample Flow
+=======
+>>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
 ```shell
 yosys
 read_liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -135,7 +186,12 @@ show
 
 -X1: Lower power, smaller size, slower
 
+<<<<<<< HEAD
 -X4: Higher power, faster, larger area
+=======
+## ✅ Summary
+Introduced to Verilog and RTL design structure.
+>>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
 
 ## ✅ Summary
 -Introduced to Verilog and RTL design structure.
@@ -146,4 +202,8 @@ show
 
 -Synthesized RTL to gate-level netlist using Yosys.
 
+<<<<<<< HEAD
 -Explored Sky130 standard cell libraries and drive strength impact.
+=======
+
+>>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
