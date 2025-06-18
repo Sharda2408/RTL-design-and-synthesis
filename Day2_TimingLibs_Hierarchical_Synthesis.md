@@ -1,4 +1,4 @@
-Day 2: Timing Libraries, Hierarchical vs Flat Synthesis, and Efficient Flop Coding Styles
+# Day 2: Timing Libraries, Hierarchical vs Flat Synthesis, and Efficient Flop Coding Styles
 
 This document summarizes the concepts covered on Day 2 of the RTL Design and Synthesis Workshop using SKY130 PDK.
 
