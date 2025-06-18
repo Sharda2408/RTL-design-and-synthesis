@@ -37,7 +37,9 @@ Tracks signal transitions, resolves delays and logic events.
 
 Outputs a .vcd (Value Change Dump) file for waveform viewing.
 
-📷 Image: Simulator internal working
+<div align="center">
+  <img src="[https://github.com/user-attachments/assets/3ca190fb-cfa4-4abb-b9e1-0151b3c4bdba](https://github.com/Sharda2408/RTL-design-and-synthesis/blob/main/images/1.png)" alt="iverilog Simulation Flow" width="70%">
+</div>
 
 ⚙️ Iverilog-Based Simulation
 Icarus Verilog (iverilog) is an open-source command-line simulator.
