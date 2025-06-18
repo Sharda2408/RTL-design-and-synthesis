@@ -16,11 +16,7 @@
 
 **Verilog** is a Hardware Description Language (HDL) used to describe and model digital systems.
 
-<<<<<<< HEAD
 **RTL (Register Transfer Level)** describes circuits in terms of data flow and registers.
-=======
-**RTL** (Register Transfer Level) describes circuits in terms of data flow and registers.
->>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
 
 **Sequential logic** is modeled using constructs like:
 
@@ -33,7 +29,6 @@ end
 ```
 ## 2. 🛠️ Open-source Simulator iverilog
 
-<<<<<<< HEAD
 ### 🔍 How a Simulator Works
 
 -Simulation mimics hardware behavior without fabrication.
@@ -41,21 +36,11 @@ end
 -Takes HDL code + testbench → calculates outputs based on stimuli.
 
 -Tracks signal transitions, resolves delays and logic events.
-=======
- **How a Simulator Works**
--Simulation mimics hardware behavior without fabrication.
-
--Takes HDL code + testbench → calculates outputs based on stimuli.
-
--Tracks signal transitions, resolves delays and logic events
 
 -Outputs a .vcd (Value Change Dump) file for waveform viewing.
 
->>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
-
 -Outputs a .vcd (Value Change Dump) file for waveform viewing.
 
-<<<<<<< HEAD
 ### ⚙️ Iverilog-Based Simulation
 
 **Icarus Verilog** (iverilog) is an open-source command-line simulator.
@@ -68,28 +53,15 @@ end
 
 -Run the generated executable
 
-=======
--Compilation flow:
-
--Write Verilog design and testbench
-
--Compile using iverilog
-
--Run the generated executable
-
->>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
 -View output waveform using GTKWave
 
 📷 Image: Simulation process using iverilog
 
 ## 3. 🧪 Using iverilog and GTKWave
-<<<<<<< HEAD
 
 ### ⚙️ Setup
-=======
-⚙️ Setup
-bash
->>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
+
+
 ```shell
 sudo apt install iverilog gtkwave
 git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
@@ -101,23 +73,17 @@ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
 
 -good_mux.v – Verilog design
 
-<<<<<<< HEAD
 -tb_good_mux.v – Testbench
 
-=======
->>>>>>> 1701d59 (Removed extra folders and typo file, cleaned up repo)
 ```shell
 iverilog good_mux.v tb_good_mux.v
 ./a.out
 gtkwave tb_good_mux.vcd
 ```
-📷 Image: GTKWave waveform
 
 ```shell
 gvim tb_good_mux.v -o good_mux.v
 ```
-📷 Image: Verilog code in GVim
-<<<<<<< HEAD
 
 **GTKWave** displays signal transitions to verify behavior.
 
@@ -130,11 +96,8 @@ The **testbench** provides clock, stimulus, and resets.
 GTKWave displays signal transitions to verify behavior.
 The testbench provides clock, stimulus, and resets.
 
-## 4. ⚙️ Yosys and Logic Synthesis
-Yosys is a synthesis tool that converts Verilog RTL to a gate-level netlist.
-
 ### Synthesis steps:
-=======
+
 **Synthesis steps:**
 
 -Parse RTL
