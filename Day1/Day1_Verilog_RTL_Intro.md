@@ -37,9 +37,6 @@ Tracks signal transitions, resolves delays and logic events.
 
 Outputs a .vcd (Value Change Dump) file for waveform viewing.
 
-<div align="center">
-  <img src="[https://github.com/user-attachments/assets/3ca190fb-cfa4-4abb-b9e1-0151b3c4bdba](https://github.com/Sharda2408/RTL-design-and-synthesis/blob/main/images/1.png)" alt="iverilog Simulation Flow" width="70%">
-</div>
 
 ⚙️ Iverilog-Based Simulation
 Icarus Verilog (iverilog) is an open-source command-line simulator.
@@ -56,13 +53,13 @@ View output waveform using GTKWave
 
 📷 Image: Simulation process using iverilog
 
-3. 🧪 Using iverilog and GTKWave
+## 3. 🧪 Using iverilog and GTKWave
 ⚙️ Setup
-bash
-Copy code
+```shell
 sudo apt install iverilog gtkwave
 git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
+```
 🧩 Simulating a 2:1 Mux Example
 Files Used:
 
@@ -70,22 +67,22 @@ good_mux.v – Verilog design
 
 tb_good_mux.v – Testbench
 
-bash
-Copy code
+```shell
 iverilog good_mux.v tb_good_mux.v
 ./a.out
 gtkwave tb_good_mux.vcd
+```
 📷 Image: GTKWave waveform
 
-bash
-Copy code
+```shell
 gvim tb_good_mux.v -o good_mux.v
+```
 📷 Image: Verilog code in GVim
 
 GTKWave displays signal transitions to verify behavior.
 The testbench provides clock, stimulus, and resets.
 
-4. ⚙️ Yosys and Logic Synthesis
+## 4. ⚙️ Yosys and Logic Synthesis
 Yosys is a synthesis tool that converts Verilog RTL to a gate-level netlist.
 
 📷 Image: Yosys interface
@@ -106,16 +103,16 @@ Map to technology cells
 A netlist is a list of gates and their interconnections.
 It’s the output of synthesis tools, based on libraries like Sky130.
 
-5. 🧪 Yosys with Sky130 PDKs
+## 5. 🧪 Yosys with Sky130 PDKs
 🧰 Sample Flow
-bash
-Copy code
+```shell
 yosys
 read_liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog good_mux.v
 synth -top good_mux
 abc -liberty ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
+```
 📷 Image: Synthesized circuit schematic (Yosys)
 
 🧠 Gate-Level Mapping
@@ -132,15 +129,12 @@ X1: Lower power, smaller size, slower
 X4: Higher power, faster, larger area
 
 ✅ Summary
-Introduced to Verilog and RTL design structure.
+-Introduced to Verilog and RTL design structure.
 
-Understood simulation concept and how simulators process time-based events.
+-Understood simulation concept and how simulators process time-based events.
 
-Practiced running iverilog and using GTKWave for waveform analysis.
+-Practiced running iverilog and using GTKWave for waveform analysis.
 
-Synthesized RTL to gate-level netlist using Yosys.
+-Synthesized RTL to gate-level netlist using Yosys.
 
-Explored Sky130 standard cell libraries and drive strength impact.
-
-yaml
-Copy code
+-Explored Sky130 standard cell libraries and drive strength impact.
