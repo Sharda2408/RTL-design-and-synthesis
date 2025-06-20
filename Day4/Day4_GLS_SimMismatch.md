@@ -36,7 +36,7 @@
 
 ### GLS using IVERILOG
 
-![image](./image/1.jpg)
+![image](./image/1.png)
 
 ### Synthesis-Simulation Mismatch
 
@@ -95,13 +95,13 @@ endmodule
 
 ### Caveat with blocking statement
 
-![image](./image/2.jpg)
+![image](./image/2.png)
 
-![image](./image/3.jpg)
+![image](./image/3.png)
 
-![image](./image/4.jpg)
+![image](./image/4.png)
 
-![image](./image/5.jpg)
+![image](./image/5.png)
 
 ## Labs on GLS and Synthesis-Simulation Mismatch
 
@@ -109,7 +109,7 @@ endmodule
 gvim ternary_operator_mux.v -o good_mux.v
 ```
 
-![image](./image/6.jpg)
+![image](./image/6.png)
 
 ```
 iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
@@ -117,7 +117,7 @@ iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
 gtkwave tb_ternary_operator_mux.vcd
 ```
 
-![image](./image/7.jpg)
+![image](./image/7.png)
 
 
 ```sh
@@ -129,14 +129,14 @@ abc -liberty /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
 write_verilog -noattr ternary_operator_mux_net.v
 show
 ```
-![image](./image/8.jpg)
+![image](./image/8.png)
 
 ```
 iverilog ./my_lib/verilog_model/primitives.v ./my_lib/verilog_model/sky130_fd_sc_hd.v ./verilog_files/ternary_operator_mux.v ./verilog_files/tb_ternary_operator_mux.v
 ./a,out
 gtkwave tb_ternary_operator_mux.vcd
 ```
-![image](./image/9.jpg)
+![image](./image/9.png)
 
 
 ```sh
@@ -144,8 +144,8 @@ iverilog good_mux.v tb-good_mux.v
 ./a.out
 gtkwave tb-good_mux.vcd
 ```
-![image](./image/10.jpg)
-![image](./image/11.jpg)
+![image](./image/10.png)
+![image](./image/11.png)
 
 
 ## Labs on Synth-Sim Mismatch for Blocking Statement
@@ -172,7 +172,7 @@ iverilog blocking_caveat.v tb-blocking_caveat.v
 ./a.out
 gtkwave tb-blocking_caveat.vcd
 ```
-![image](./image/12.jpg)
+![image](./image/12.png)
 
 
 ```sh
@@ -183,15 +183,15 @@ dfflibmap -liberty ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 abc -liberty ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
-![image](./image/13.jpg)
+![image](./image/13.png)
 
 ```sh
 iverilog ./my_lib/verilog_model/primitives.v ./my_lib/verilog_model/sky130_fd_sc_hd.v ./verilog_files/bad_mux_net.v ./verilog_files/tb_bad_mux.v
 ./a.out
 gtkwave tb_blocking_caveat.vcd
 ```
-![image](./image/14.jpg)
-![image](./image/15.jpg)
+![image](./image/14.png)
+![image](./image/15.png)
 
 ## Summary
 
